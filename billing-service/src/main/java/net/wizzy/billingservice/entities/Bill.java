@@ -15,9 +15,9 @@ public class Bill {
     private Long id;
     private Date billingDate;
     private Long customerId;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bill")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bill") // dans une facture on a plusieurs ProductItems
     private List<ProductItem> productItems;
-    @Transient
+    @Transient // Permet d'indiquer a jpa que cette attribut on le garde dans la classe mais il n'est pas représenté dans la BD
     private Customer customer;
 
     public Long getId() {

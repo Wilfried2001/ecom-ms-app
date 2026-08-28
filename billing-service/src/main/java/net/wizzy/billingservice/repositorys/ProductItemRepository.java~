@@ -8,5 +8,5 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface ProductItemRepository extends JpaRepository<ProductItem, Long> {
-    List<ProductItem> findByBillId(Long billId); // on lui donne billId il retourne une liste de ProductItem
+    List<ProductItem> findByBillId(Long billId);
 }

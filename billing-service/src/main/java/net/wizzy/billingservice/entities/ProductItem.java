@@ -17,7 +17,7 @@ public class ProductItem {
     private Long productId;
     private int quantity;
     private double price;
-    @ManyToOne
+    @ManyToOne // Plusieurs ProductItem peuvent se trouver dans une facture
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Bill bill;
     @Transient
